@@ -1,0 +1,106 @@
+.offers-banner {
+  min-height: calc(100vh - 10rem);
+  margin-top: 11.3rem;
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    grid-column: 1 / span 8;
+    grid-row: 1 / span 2;
+    padding: 4rem;
+    padding-left: 8rem;
+    background: #142053;
+    z-index: 2;
+
+    h1 {
+      font-size: 5.4rem;
+      font-weight: 400;
+      color: #fff;
+      margin-bottom: 9rem;
+    }
+    p {
+      font-size: 2.4rem;
+      color: #fff;
+    }
+  }
+  &__image {
+    grid-column: 1/-1;
+    grid-row: 2 / span 2;
+    min-height: 70vh;
+    background-position: center 30%;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &__subheading {
+    grid-column: 1/-1;
+    grid-row: 4;
+    padding: 2rem;
+    padding-top: 12rem;
+    padding-bottom: 12rem;
+    background-color: $secondary-color;
+
+    p {
+      font-size: 3.2rem;
+      text-align: center;
+      line-height: 1.4;
+      max-width: 120rem;
+      margin: 0 auto;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    &__main {
+      h1 {
+        font-size: 4.6rem;
+      }
+      p {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  @media (max-width: 992px) {
+    &__main {
+      grid-row: 1/2;
+      grid-column: 1/-1;
+      padding: 2rem;
+      align-items: center;
+      
+      h1 {
+        font-size: 3.5rem;
+      }
+      p {
+        font-size: 1.6rem;
+      }
+    }
+
+    &__image {
+      grid-row: 2/3;
+      min-height: 40vh;
+    }
+    
+    &__subheading {
+      grid-row: 3;
+      padding-top: 8rem;
+      padding-bottom: 8rem;
+
+      p {
+        font-size: 2.4rem;
+      }
+    }
+  }
+
+  @media (max-width: 576px) {
+    &__main {
+      h1 {
+        font-size: 3rem;
+      }
+
+      p {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}

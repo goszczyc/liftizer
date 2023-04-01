@@ -1,0 +1,84 @@
+.contact {
+  margin-top: 11.2rem;
+
+  &__heading {
+    h2 {
+      font-size: 4.6rem;
+      color: #142053;
+      margin-bottom: 1.2rem;
+    }
+  }
+
+
+  &__form {
+    position: relative;
+    &-group {
+      display: flex;
+      flex-direction: column;
+      margin-top: 3.8rem;
+
+      .contact__form-label {
+        text-transform: uppercase;
+        font-size: 1.5rem;
+        line-height: 1;
+        font-weight: 600;
+        margin-bottom: 1rem;
+      }
+
+      .contact__form-input {
+        font-size: 1.6rem;
+        line-height: 1;
+        padding: 1.4rem 0.2rem;
+        border: none;
+        border-bottom: 1px solid #a9a9a9;
+        width: 100%;
+        outline: none;
+        &::placeholder {
+          color: #a9a9a9;
+        }
+
+        &--message {
+          resize: none;
+          line-height: 1.4;
+        }
+      }
+
+      &:focus-within {
+        .contact__form-input {
+          border-color: rgb(255, 196, 68);
+        }
+        .contact__form-label {
+          color: rgb(255, 196, 68);
+        }
+      }
+
+      &--hor {
+        flex-direction: row-reverse;
+        align-items: center;
+      }
+
+      .wpcf7-not-valid-tip {
+        margin-top: 0.5rem;
+        font-weight: 600;
+      }
+
+    }
+  }
+  .wpcf7 form.invalid .wpcf7-response-output {
+    font-size: 1.4rem;
+    border: none;
+    border-bottom: 2px solid #dc3232;
+  }
+
+  .wpcf7 form.valid .wpcf7-response-output {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    inset: 0;
+    background: #fff;
+    text-align: center;
+    font-size: 3rem;
+    border: none;
+  }  
+}

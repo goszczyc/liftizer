@@ -1,0 +1,40 @@
+/** COLORS **/
+$white: #fff;
+$black: #000;
+$black-hover: hsl(0, 0%, 35%);
+$body-bg: #fff;
+
+$text-color: #1b1b1b;
+
+$main-color: #2a416c;
+
+$primary-color: #1b1b1b;
+$primary-color--hover: #f85b46;
+$secondary-color: #efeeee;
+
+/** DECORATIONS **/
+
+$transition-standard: 300ms;
+$transition-slow: 600ms;
+$transition-fast: 120ms;
+
+/** FONTS **/
+$font-text: 'Montserrat', sans-serif;
+$secondary-font: dita, sans-serif;
+$thirdary-font: freight-text-pro, serif;
+$active-font: active, sans-serif;
+
+/** RESPONSIVE BREAKPOINTS **/
+$breakpoints: (
+  xs: 576px,
+  sm: 768px,
+  md: 992px,
+  lg: 1200px,
+  xl: 1500px,
+);
+
+@media (prefers-reduced-motion) {
+  $transition-slow: 0.1ms;
+  $transition-fast: 0.1ms;
+  $transition-standard: 0.1ms;
+}

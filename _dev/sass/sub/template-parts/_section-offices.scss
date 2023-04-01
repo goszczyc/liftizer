@@ -1,0 +1,36 @@
+.offices {
+  margin-top: 5rem;
+
+  &__heading {
+    font-size: 4.6rem;
+    color: #142053;
+    margin-bottom: 0;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+    .offices__office {
+      max-width: 28rem;
+
+      h3,h4 {
+        font-size: 1.6rem;
+        font-weight: 400;
+        color: #758092;
+        margin-top: 3.8rem;
+        margin-bottom: 0;
+      }
+
+      p,a {
+        font-size: 1.8rem;
+        color: #000;
+        font-family: $font-text;
+        font-weight: 600;
+        line-height: 1.4;
+      }
+    }
+  }
+}

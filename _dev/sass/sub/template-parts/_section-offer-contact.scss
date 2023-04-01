@@ -1,0 +1,36 @@
+.offer-contact {
+  padding: 0;
+
+  &__bg {
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    &::before {
+      @include pseudo;
+      inset: 0;
+      background-color: #142053ef;
+    }
+  }
+
+  &__content {
+    position: relative;
+    padding: 9.3rem 14.7rem;
+    p {
+      font-size: 2.2rem;
+      line-height: 1.5;
+      color: #fff;
+      margin-bottom: 6.7rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    &__content {
+      padding: 6rem 4rem;
+      p {
+        font-size: 1.8rem;
+      }
+    }
+  }
+}

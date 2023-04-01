@@ -1,0 +1,36 @@
+.blog-post {
+  margin-top: 4rem;
+
+  &__article {
+    & * {
+      margin-bottom: 3rem;
+      color: #676768;
+    }
+    .blog-post__breadcrumbs {
+      color: #676768;
+      font-size: 1.6rem;
+      margin-bottom: 4.4rem;
+      text-transform: lowercase;
+
+      a {
+        color: #0091d4;
+      }
+    }
+    h2, h3 {
+      color: #0c2947;
+      font-size: 2.6rem;
+    }
+
+    p {
+      text-align: justify;
+      line-height: 1.5;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      object-fit: contain;
+      margin: 0 auto;
+    }
+  }
+}

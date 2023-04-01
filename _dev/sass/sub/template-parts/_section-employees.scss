@@ -1,0 +1,76 @@
+.contact-employees {
+  padding-top: 11.5rem;
+
+  &__heading {
+    margin-bottom: 9rem;
+
+    h2 {
+      font-size: 4.6rem;
+      color: #142053;
+      margin-bottom: 3.4rem;
+    }
+    p {
+      font-size: 1.6rem;
+      color: #758092;
+      line-height: 1.6;
+    }
+  }
+
+  &__cards {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 2rem;
+    flex-wrap: wrap;
+
+    .contact-employees__employee {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      min-width: 24rem;
+      margin-bottom: 6rem;
+
+      &:hover {
+        .contact-employees__employee-photo img {
+          transform: scale(1.05);
+        }
+      }
+      &-photo {
+        width: 17rem;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-bottom: 2rem;
+
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+          transition: transform 300ms;
+        }
+      }
+
+      &-name {
+        font-size: 2rem;
+        margin-bottom: 2.8rem;
+      }
+
+      &-position {
+        font-size: 1.4rem;
+      }
+
+      &-email {
+        font-size: 1.6rem;
+        color: #60c6ed;
+        margin-bottom: 1.8rem;
+      }
+
+      &-phone {
+        font-size: 1.8rem;
+        font-weight: 600;
+      }
+
+      
+    }
+  }
+}

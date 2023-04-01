@@ -1,0 +1,206 @@
+.offers-container {
+  position: relative;
+  background-color: #f9f9f9;
+
+  .offers-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    position: relative;
+    width: 6rem;
+    height: 3rem;
+    min-height: 3rem;
+    margin: 0 auto;
+    margin-bottom: 3.2rem;
+    padding-top: 5rem;
+
+    &__number {
+      font-size: 1.4rem;
+      font-family: $secondary-font;
+      border-top: 1px solid #000;
+      width: max-content;
+      font-weight: 600;
+    }
+    &__button {
+      position: absolute;
+      border: none;
+      background: none;
+      cursor: pointer;
+      padding: 1rem 2rem;
+
+      &--prev {
+        right: 100%;
+      }
+      &--next {
+        left: 100%;
+      }
+
+      .offers-nav__button-arrow {
+        position: relative;
+        width: 20px;
+        height: 2px;
+        background: #1b1b1b;
+
+        &--prev::before {
+          @include pseudo;
+          left: -1rem;
+          top: 50%;
+          border-right: 10px solid #1b1b1b;
+          border-top: 5px solid transparent;
+          border-bottom: 5px solid transparent;
+          transform: translateY(-50%);
+        }
+        &--next::before {
+          @include pseudo;
+          right: -1rem;
+          top: 50%;
+          border-left: 10px solid #1b1b1b;
+          border-top: 5px solid transparent;
+          border-bottom: 5px solid transparent;
+          transform: translateY(-50%);
+        }
+      }
+
+      &:hover {
+        .offers-nav__button-arrow {
+          animation: slide 300ms alternate infinite;
+        }
+      }
+    }
+  }
+
+  .offers {
+    &__offer-container {
+      &--border {
+        border-bottom: 4px solid #fff;
+
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+
+      .offers__offer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        padding-bottom: 5rem;
+
+        &-title {
+          font-size: 2.6rem;
+          margin-bottom: 3.8rem;
+        }
+
+        &-description {
+          max-width: 80rem;
+          margin-bottom: 4rem;
+        }
+
+        &-img {
+          max-height: 56.1rem;
+          max-width: 120rem;
+          object-fit: contain;
+          margin-bottom: 4rem;
+
+          &--mobile {
+            display: none;
+            width: 100%;
+          }
+        }
+
+        &-contact-btn {
+          display: flex;
+          align-items: center;
+          padding: 2rem 3rem;
+          font-size: 1.6rem;
+          border: none;
+          border-radius: 50vw;
+          background-color: #49c8ee;
+          cursor: pointer;
+          transition: background 300ms, color 300ms;
+          strong {
+            text-decoration: underline;
+          }
+
+          img {
+            height: 1.5em;
+            width: auto;
+            object-fit: contain;
+            margin-right: 1em;
+          }
+
+          &:hover {
+            background-color: #0b1a35;
+            color: #fff;
+          }
+        }
+
+        &-info {
+          display: none;
+          width: 100%;
+          margin-bottom: 4rem;
+          border-collapse: collapse;
+
+          td {
+            border: 1px solid #0b1a35;
+            padding: 1rem;
+
+            &.offers__offer-info-icon {
+              img {
+                height: 6rem;
+                width: auto;
+                object-fit: contain;
+              }
+            }
+            &.offers__offer-info-text {
+              p {
+                font-size: 1.6rem;
+              }
+            }
+          }
+        }
+
+        &-multi-container {
+          max-width: 150rem;
+          margin-bottom: 4rem;
+          justify-content: center;
+
+          .offers__offer-multi {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            img {
+              height: 20rem;
+              width: auto;
+              object-fit: contain;
+            }
+
+            p {
+              text-align: center;
+              max-width: 25rem;
+              &::first-letter {
+                font-weight: 600;
+              }
+            }
+          }
+        }
+
+        @media (max-width: 768px) {
+          &-img {
+            display: none;
+            &--mobile {
+              display: block;
+            }
+          }
+
+          &-info {
+            display: table;
+          }
+        }
+      }
+    }
+  }
+  
+}

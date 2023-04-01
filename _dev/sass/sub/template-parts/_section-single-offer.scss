@@ -1,0 +1,235 @@
+.offer {
+  padding-top: 10rem;
+  &__title {
+    color: #142053;
+    font-size: 4.6rem;
+    font-weight: 600;
+    margin-bottom: 3.4rem;
+  }
+
+  &__description {
+    & * {
+      margin-bottom: 3.2rem;
+    }
+
+    p {
+      color: #758092;
+      font-size: 1.6rem;
+      line-height: 1.6;
+    }
+
+    h2,
+    h3 {
+      color: #0091d4;
+      font-size: 1.6rem;
+      font-weight: 600;
+    }
+  }
+
+  &__images {
+    .offer__images-nav {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      &-dots {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        li {
+          list-style: none;
+
+          button {
+            font-size: 1.6rem;
+            font-weight: 600;
+            background: none;
+            padding: 0.5rem;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            margin-bottom: 3rem;
+            transition: color 300ms;
+
+            &:hover,
+            &:focus {
+              color: gold;
+            }
+          }
+
+          &.slick-active {
+            button {
+              color: #0091d4;
+            }
+          }
+        }
+      }
+    }
+    .offer__slider {
+      padding-right: 0;
+      .offer__slider-image-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        max-height: 60rem;
+        .offer__slider-image {
+          display: block;
+          width: 100%;
+          height: auto;
+          object-fit: cover;
+
+          &.fit-contain {
+            object-fit: contain;
+            max-height: 60rem;
+            max-width: 100%;
+          }
+        }
+      }
+    }
+  }
+  &.padding-reset {
+    padding-top: 0;
+  }
+
+  .offer__form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 8rem;
+
+    .wpcf7 {
+      position: relative;
+      max-width: 144rem;
+      padding: 2rem 12rem;
+      border-radius: 1rem;
+      max-height: 100vh;
+
+      &-not-valid-tip {
+        color: #e60808;
+        font-size: 1.1rem;
+        margin-top: 0.3rem;
+      }
+
+      &-response-output {
+        color: rgb(255, 196, 68);
+        border: none;
+        font-size: 1.2rem;
+        margin: 0;
+        margin-top: 0.5rem;
+      }
+
+      .offer__form-group {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 3.6rem;
+
+        .offer__form-label {
+          color: #000;
+          text-transform: uppercase;
+          font-size: 1.5rem;
+          font-weight: 600;
+          margin-bottom: 2rem;
+          cursor: pointer;
+        }
+
+        .offer__form-input {
+          background: transparent;
+          color: #000;
+          font-size: 1.6rem;
+          line-height: 1.4;
+          padding-bottom: 0.6rem;
+          border: none;
+          outline: none;
+          border-bottom: 1px solid #a9a9a9;
+          width: 100%;
+
+          &:active,
+          &:focus {
+            border-color: #ffd700;
+          }
+
+          &--message {
+            resize: none;
+          }
+        }
+
+        &--name {
+          flex-direction: row;
+          align-items: center;
+          gap: 1rem;
+
+          .offer__form-label {
+            font-size: 2.6rem;
+            margin: 0;
+            margin-bottom: 4rem;
+            cursor: unset;
+          }
+
+          .offer__form-input {
+            font-size: 2.6rem;
+            padding: 0;
+            min-width: min-content;
+            max-width: fit-content;
+            border: none;
+            font-family: $font-text;
+          }
+        }
+      }
+    }
+
+    @media (max-width: 992px) {
+      .wpcf7 {
+        .offer__form-group {
+          margin-bottom: 2rem;
+          .offer__form-label {
+            margin-bottom: 0.5rem;
+          }
+
+          &--name {
+            .offer__form-label {
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+    @media (max-width: 768px) {
+      .wpcf7 {
+        padding: 4rem 6rem;
+        padding-bottom: 1rem;
+
+        .offer__form-group {
+          .offer__form-label {
+            font-size: 1.4rem;
+          }
+          .offer__form-input {
+            font-size: 1.4rem;
+          }
+
+          &--name {
+            .offer__form-label {
+              font-size: 1.8rem;
+            }
+          }
+        }
+      }
+    }
+    @media (max-width: 576px) {
+      .wpcf7 {
+        padding: 2rem;
+      }
+    }
+  }
+
+  @media (max-width: 992px) {
+    &__images {
+      .offer__images-nav {
+        justify-content: center;
+
+        &-dots {
+          flex-direction: row;
+          gap: 0.5rem;
+        }
+      }
+    }
+  }
+}
